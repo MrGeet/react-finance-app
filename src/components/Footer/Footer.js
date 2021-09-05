@@ -15,43 +15,23 @@ import {
 	SocialIcons,
 	SocialIconLink,
 } from './Footer.elements';
+import { footerData } from '../../data/FooterData';
 
 function Footer() {
 	return (
 		<FooterContainer>
 			<FooterLinksContainer>
 				<FooterLinksWrapper>
-					<FooterLinkItems>
-						<FooterLinkTitle>About Us</FooterLinkTitle>
-						<FooterLink to="/sign-up">How it works</FooterLink>
-						<FooterLink to="/">Testimonials</FooterLink>
-						<FooterLink to="/">Careers</FooterLink>
-						<FooterLink to="/">Investors</FooterLink>
-						<FooterLink to="/">Terms of Service</FooterLink>
-					</FooterLinkItems>
-					<FooterLinkItems>
-						<FooterLinkTitle>Contact Us</FooterLinkTitle>
-						<FooterLink to="/">Contact</FooterLink>
-						<FooterLink to="/">Support</FooterLink>
-						<FooterLink to="/">Destinations</FooterLink>
-						<FooterLink to="/">Sponsorships</FooterLink>
-					</FooterLinkItems>
-				</FooterLinksWrapper>
-				<FooterLinksWrapper>
-					<FooterLinkItems>
-						<FooterLinkTitle>Videos</FooterLinkTitle>
-						<FooterLink to="/">Submit Video</FooterLink>
-						<FooterLink to="/">Ambassadors</FooterLink>
-						<FooterLink to="/">Agency</FooterLink>
-						<FooterLink to="/">Influencer</FooterLink>
-					</FooterLinkItems>
-					<FooterLinkItems>
-						<FooterLinkTitle>Social Media</FooterLinkTitle>
-						<FooterLink to="/">Instagram</FooterLink>
-						<FooterLink to="/">Facebook</FooterLink>
-						<FooterLink to="/">Youtube</FooterLink>
-						<FooterLink to="/">Twitter</FooterLink>
-					</FooterLinkItems>
+					{footerData.map((footerItem, index) => (
+						<FooterLinkItems key={index}>
+							<FooterLinkTitle>{footerItem.title}</FooterLinkTitle>
+							{footerItem.links.map((link, linkIndex) => (
+								<FooterLink ket={linkIndex} to="/">
+									{link}
+								</FooterLink>
+							))}
+						</FooterLinkItems>
+					))}
 				</FooterLinksWrapper>
 			</FooterLinksContainer>
 			<SocialMedia>
@@ -69,9 +49,7 @@ function Footer() {
 							<FaInstagram />
 						</SocialIconLink>
 						<SocialIconLink
-							href={
-								'//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber'
-							}
+							href={'/'}
 							rel="noopener noreferrer"
 							target="_blank"
 							aria-label="Youtube"

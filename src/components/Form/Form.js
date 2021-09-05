@@ -9,10 +9,10 @@ import {
 	FormInputRow,
 	FormMessage,
 	FormButton,
+	FormTitle,
 } from './FormStyles';
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
-import { Heading } from '../Content/Content.elements';
 
 const Form = () => {
 	const [name, setName] = useState('');
@@ -64,7 +64,7 @@ const Form = () => {
 			<Container>
 				<FormRow>
 					<FormColumn small>
-						<Heading>Sign up</Heading>
+						<FormTitle>Sign up</FormTitle>
 						<FormWrapper onSubmit={handleSubmit}>
 							{formData.map((el, index) => (
 								<FormInputRow key={index}>
