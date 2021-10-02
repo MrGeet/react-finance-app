@@ -1,15 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const ContentSec = styled.div`
-	padding: 140px 0;
-
-	background: ${({ inverse }) => (inverse ? 'white' : '#071c2f')};
-	@media screen and (max-width: 768px) {
-		padding: 70px 0;
-	}
-`;
-
 export const ContentRow = styled.div`
 	display: flex;
 	margin: 0 -15px -15px -15px;
@@ -60,6 +51,53 @@ export const TextWrapper = styled.div`
 	}
 `;
 
+export const ImgWrapper = styled(motion.div)`
+	display: flex;
+	justify-content: ${({ imgStart }) => (imgStart ? 'flex-start' : 'flex-end')};
+	max-height: 700px;
+	justify-content: center;
+	position: relative;
+`;
+
+export const TopLine = styled(motion.div)`
+	font-size: 0.9rem;
+	line-height: 16px;
+	font-weight: 550;
+	letter-spacing: 1.4px;
+	margin-bottom: 1.3rem;
+	color: #979797;
+`;
+
+export const Img = styled(motion.img)`
+	padding-right: 0;
+	border: 0;
+	max-width: 100%;
+	vertical-align: middle;
+	display: inline-block;
+	object-fit: cover;
+	max-height: 700px;
+	z-index: 1;
+`;
+
+export const Heading = styled(motion.h2)`
+	margin-bottom: 24px;
+	font-size: 3rem;
+	line-height: 1.1;
+	font-weight: 600;
+	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
+
+	@media screen and (max-width: 768px) {
+		text-align: center;
+	}
+`;
+
+export const Subtitle = styled(motion.p)`
+	max-width: 440px;
+	margin-bottom: 35px;
+	line-height: 24px;
+	color: ${({ inverse }) => (inverse ? '#6a6a6a' : 'white')};
+`;
+
 export const ContentButton = styled(motion.button)`
 	height: 3rem;
 	padding: 16px 32px;
@@ -68,7 +106,6 @@ export const ContentButton = styled(motion.button)`
 	line-height: 18px;
 	letter-spacing: 1.54px;
 	text-transform: uppercase;
-	/* background: ${({ inverse }) => (inverse ? '#0c4577' : 'white')}; */
 	cursor: pointer;
 	background: none;
 	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
@@ -104,52 +141,4 @@ export const ContentButton = styled(motion.button)`
 	&:hover {
 		color: ${({ inverse }) => (inverse ? 'white' : 'black')};
 	}
-`;
-
-export const ImgWrapper = styled(motion.div)`
-	display: flex;
-	justify-content: ${({ imgStart }) => (imgStart ? 'flex-start' : 'flex-end')};
-	max-height: 700px;
-	justify-content: center;
-	position: relative;
-`;
-
-export const TopLine = styled(motion.div)`
-	font-size: 0.9rem;
-	line-height: 16px;
-	font-weight: 550;
-	letter-spacing: 1.4px;
-	margin-bottom: 1.3rem;
-	color: #979797;
-`;
-
-export const Img = styled(motion.img)`
-	padding-right: 0;
-	border: 0;
-	max-width: 100%;
-	vertical-align: middle;
-	display: inline-block;
-	object-fit: cover;
-	height: 400px;
-	max-height: 700px;
-	z-index: 1;
-`;
-
-export const Heading = styled(motion.h2)`
-	margin-bottom: 24px;
-	font-size: 3rem;
-	line-height: 1.1;
-	font-weight: 600;
-	color: ${({ inverse }) => (inverse ? '#0c4577' : 'white')};
-
-	@media screen and (max-width: 768px) {
-		text-align: center;
-	}
-`;
-
-export const Subtitle = styled(motion.p)`
-	max-width: 440px;
-	margin-bottom: 35px;
-	line-height: 24px;
-	color: ${({ inverse }) => (inverse ? '#6a6a6a' : 'white')};
 `;

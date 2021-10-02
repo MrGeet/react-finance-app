@@ -1,8 +1,7 @@
 import React from 'react';
-import { Container } from '../../globalStyles';
+import { Container, Section } from '../../globalStyles';
 import {
 	FeatureText,
-	FeatureSection,
 	FeatureTitle,
 	FeatureWrapper,
 	FeatureColumn,
@@ -23,7 +22,7 @@ const Features = () => {
 	};
 
 	return (
-		<FeatureSection id="about">
+		<Section smPadding="50px 10px" position="relative" inverse id="about">
 			<Container>
 				<FeatureTextWrapper>
 					<FeatureTitle>What We Offer</FeatureTitle>
@@ -45,7 +44,7 @@ const Features = () => {
 					))}
 				</FeatureWrapper>
 			</Container>
-		</FeatureSection>
+		</Section>
 	);
 };
 

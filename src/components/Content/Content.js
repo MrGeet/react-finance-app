@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { Container } from '../../globalStyles';
+import { Container, Section } from '../../globalStyles';
 import {
-	ContentSec,
 	ContentRow,
 	TextWrapper,
 	TopLine,
@@ -11,7 +10,7 @@ import {
 	ImgWrapper,
 	Img,
 	ContentColumn,
-} from './Content.elements';
+} from './ContentStyles';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
@@ -46,7 +45,7 @@ function Content({
 	}, [inView, animation]);
 	return (
 		<>
-			<ContentSec inverse={inverse} ref={ref}>
+			<Section inverse={inverse} ref={ref}>
 				<Container>
 					<ContentRow reverse={reverse}>
 						<ContentColumn>
@@ -104,7 +103,7 @@ function Content({
 						</ContentColumn>
 					</ContentRow>
 				</Container>
-			</ContentSec>
+			</Section>
 		</>
 	);
 }

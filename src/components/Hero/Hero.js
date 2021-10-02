@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Container, Header } from '../../globalStyles';
+import { Button, Container, MainHeading } from '../../globalStyles';
 import { HeroVideo, HeroSection, HeroText, ButtonWrapper, HeroButton } from './HeroStyles';
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
 			<HeroSection id="hero">
 				<HeroVideo src="./assets/hero.mp4" autoPlay loop muted />
 				<Container>
-					<Header>Your data is secure with us</Header>
+					<MainHeading>Your data is secure with us</MainHeading>
 					<HeroText>
 						We provide the best security systems for clients all over the world
 					</HeroText>

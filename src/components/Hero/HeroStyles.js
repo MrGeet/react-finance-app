@@ -39,7 +39,6 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const HeroButton = styled(Button)`
-	/* background-color: #fff; */
 	color: black;
 
 	&:before {

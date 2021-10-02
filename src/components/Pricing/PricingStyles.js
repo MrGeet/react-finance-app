@@ -128,6 +128,4 @@ export const PricingCardFeature = styled.li`
 		content: '🎧';
 		margin-right: 0.4rem;
 	}
-	/* align-items: center; */
-	/* justify-content: flex-end; */
 `;

@@ -14,7 +14,7 @@ import {
 	PricingCardFeature,
 	PriceSubtitle,
 	PricingCard,
-} from './Pricing.elements';
+} from './PricingStyles';
 import { pricingData } from '../../data/PricingData';
 
 function Pricing() {
@@ -23,17 +23,14 @@ function Pricing() {
 			<PricingSection id="pricing">
 				<PricingWrapper>
 					<PricingHeading>Pick Your Best Option</PricingHeading>
-					<PriceSubtitle>
-						Listen without limits on your phone, speaker, and other devices at the most
-						suitable option for you.
-					</PriceSubtitle>
+					<PriceSubtitle>Create, maintain and store your data with Delta.</PriceSubtitle>
 					<PricingContainer>
 						{pricingData.map((card, index) => (
 							<PricingCard>
 								<PricingCardInfo key={index}>
 									<PricingCardPlan>{card.title}</PricingCardPlan>
 									<PricingCardCost>{card.price}</PricingCardCost>
-									<PricingCardText>{card.numAcc}</PricingCardText>
+									<PricingCardText>{card.description}</PricingCardText>
 									<PricingCardFeatures>
 										{card.features.map((feature, index) => (
 											<PricingCardFeature key={index}>

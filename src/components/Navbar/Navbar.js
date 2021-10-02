@@ -13,6 +13,7 @@ import {
 	NavItem,
 } from './Navbar.elements';
 import { useLocation, useHistory } from 'react-router-dom';
+import { data } from '../../data/NavbarData';
 
 function Navbar() {
 	const [click, setClick] = useState(false);
@@ -32,22 +33,6 @@ function Navbar() {
 
 		setClick(false);
 	};
-
-	const navbarData = [
-		{
-			to: '/',
-			text: 'About',
-			id: 'about',
-		},
-		{
-			to: '/pricing',
-			text: 'Pricing',
-		},
-		{
-			to: '/signup',
-			text: 'Contact',
-		},
-	];
 
 	const scrollTo = (id) => {
 		const element = document.getElementById(id);
@@ -70,7 +55,7 @@ function Navbar() {
 							{click ? <FaTimes /> : <CgMenuRight />}
 						</MobileIcon>
 						<NavMenu onClick={handleClick} click={click}>
-							{navbarData.map((el, index) => (
+							{data.map((el, index) => (
 								<NavItem key={index}>
 									<NavLinks onClick={() => closeMobileMenu(el.to, el.id)}>
 										{el.text}
