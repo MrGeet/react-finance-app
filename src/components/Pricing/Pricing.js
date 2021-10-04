@@ -1,10 +1,9 @@
 import React from 'react';
-import { Button } from '../../globalStyles';
+import { Button, Heading, TextWrapper } from '../../globalStyles';
 import { IconContext } from 'react-icons/lib';
 import {
 	PricingSection,
 	PricingWrapper,
-	PricingHeading,
 	PricingContainer,
 	PricingCardInfo,
 	PricingCardPlan,
@@ -12,7 +11,6 @@ import {
 	PricingCardFeatures,
 	PricingCardText,
 	PricingCardFeature,
-	PriceSubtitle,
 	PricingCard,
 } from './PricingStyles';
 import { pricingData } from '../../data/PricingData';
@@ -22,12 +20,21 @@ function Pricing() {
 		<IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
 			<PricingSection id="pricing">
 				<PricingWrapper>
-					<PricingHeading>Pick Your Best Option</PricingHeading>
-					<PriceSubtitle>Create, maintain and store your data with Delta.</PriceSubtitle>
+					<Heading>Pick Your Best Option</Heading>
+
+					<TextWrapper
+						mb="1.4rem"
+						weight="600"
+						size="1.1rem"
+						color="white"
+						align="center"
+					>
+						Create, maintain and store your data with Delta.
+					</TextWrapper>
 					<PricingContainer>
 						{pricingData.map((card, index) => (
-							<PricingCard>
-								<PricingCardInfo key={index}>
+							<PricingCard key={index}>
+								<PricingCardInfo>
 									<PricingCardPlan>{card.title}</PricingCardPlan>
 									<PricingCardCost>{card.price}</PricingCardCost>
 									<PricingCardText>{card.description}</PricingCardText>

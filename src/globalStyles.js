@@ -32,14 +32,30 @@ export const MainHeading = styled.h1`
 	letter-spacing: 4px;
 	text-align: center;
 `;
+
 export const Heading = styled.h2`
-	margin-bottom: 2rem;
-	color: ${({ inverse }) => (inverse ? '#000' : '#fff')};
 	font-size: clamp(1.3rem, 13vw, 3.1rem);
+	margin: ${({ margin }) => (margin ? margin : '')};
+	margin-bottom: ${({ mb }) => (mb ? mb : '2rem')};
+	margin-top: ${({ mt }) => (mt ? mt : '')};
+	color: ${({ inverse }) => (inverse ? '#000' : '#fff')};
 	line-height: 1.06;
 	letter-spacing: 0.4rem;
 	width: ${({ width }) => (width ? width : '100%')};
 	text-align: center;
+`;
+
+export const TextWrapper = styled.span`
+	color: ${({ color }) => (color ? color : '')};
+	font-size: ${({ size }) => (size ? size : '')};
+	font-weight: ${({ weight }) => (weight ? weight : '')};
+	text-align: ${({ align }) => (align ? align : '')};
+	letter-spacing: ${({ spacing }) => (spacing ? spacing : '')};
+	line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : '')};
+	padding: ${({ padding }) => (padding ? padding : '')};
+	margin: ${({ margin }) => (margin ? margin : '')};
+	margin-bottom: ${({ mb }) => (mb ? mb : '2rem')};
+	margin-top: ${({ mt }) => (mt ? mt : '')};
 `;
 
 export const Section = styled.section`
@@ -103,17 +119,6 @@ export const GridContainer = styled.div`
 	position: ${({ position }) => (position ? position : '')};
 	width: ${({ width }) => (width ? width : 'auto')};
 	height: ${({ height }) => (height ? height : 'auto')};
-`;
-
-export const TextWrapper = styled.span`
-	color: ${({ color }) => (color ? color : '')};
-	font-size: ${({ size }) => (size ? size : '')};
-	font-weight: ${({ weight }) => (weight ? weight : '')};
-	text-align: ${({ align }) => (align ? align : '')};
-	letter-spacing: ${({ spacing }) => (spacing ? spacing : '')};
-	line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : '')};
-	padding: ${({ padding }) => (padding ? padding : '')};
-	margin: ${({ margin }) => (margin ? margin : '')};
 `;
 
 export const Button = styled.button`

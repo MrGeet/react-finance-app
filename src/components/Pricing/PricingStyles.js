@@ -22,21 +22,6 @@ export const PricingWrapper = styled.div`
 	}
 `;
 
-export const PricingHeading = styled.h2`
-	color: #fff;
-	font-size: 3rem;
-	margin-bottom: 24px;
-`;
-
-export const PriceSubtitle = styled.h1`
-	max-width: 440px;
-	margin-bottom: 35px;
-	font-size: 18px;
-	line-height: 24px;
-	text-align: center;
-	color: #fff;
-`;
-
 export const PricingContainer = styled.div`
 	display: flex;
 	justify-content: center;
